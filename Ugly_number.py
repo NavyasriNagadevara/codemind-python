@@ -1,16 +1,16 @@
-n=int(input())
-temp=n
-x=0
-while temp!=1:
-    if temp%2==0:
-        temp/=2
-    elif temp%3==0:
-        temp/=3
-    elif temp%5==0:
-        temp/=5
+n = int(input())
+x = 0
+while n!=1:
+    if n%2==0:
+        n//=2
+    elif n%3==0:
+        n//=3
+    elif n%5==0:
+        n//=5
     else:
-        print("Not Ugly Number")
-        x=1
+        x+=1
         break
 if x==0:
     print("Ugly Number")
+else:
+    print("Not Ugly Number")
