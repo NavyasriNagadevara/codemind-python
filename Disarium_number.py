@@ -1,13 +1,15 @@
-a=int(input())
-temp=a
-d=sum=0
-len=len(str(a))
-while(a>0):
-    d=a%10
-    sum=sum+int(d**len)
-    a=a//10
-    len=len-1
-if(temp==sum):
-    print("True")
+n = int(input())
+temp = n
+su,rev=0,0
+while n:
+    rev=rev*10+n%10
+    n//=10
+i = 1
+while rev:
+    su+=(rev%10)**i
+    rev//=10
+    i += 1
+if su==temp:
+    print(True)
 else:
-    print("False")
+    print(False)
