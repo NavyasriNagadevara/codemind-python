@@ -1,10 +1,11 @@
 n = int(input())
-f = 0
-for i in range(n):
-    if i * (i + 1) == n:
-        f = 1
+x=0
+c=0
+while x*(x+1)<=n:
+    if x*(x+1)==n:
+        print("YES")
+        c+=1
         break
-if f==1:
-    print("YES")
-else:
+    x+=1
+if c==0:
     print("NO")
