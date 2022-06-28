@@ -1,11 +1,15 @@
 n = int(input())
-x = str(n)
-op = [x]
-for i in range(len(x)):
-    if x[i] == "9": 
-        z = x[:i] + "6" + x[1+i:]
-    elif x[i] == "6":
-        z = x[:i] + "9" + x[1+i:]
-    op.append(z)
-op.sort()
-print(op[-1])
+rev=0
+while n:
+    rev=rev*10+n%10
+    n//=10
+max=0
+c=0
+while rev:
+    if rev%10==6 and c==0:
+        max=max*10+9
+        c=1
+    else:
+        max=max*10+rev%10
+    rev//=10
+print(max)
