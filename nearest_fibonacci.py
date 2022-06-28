@@ -1,19 +1,23 @@
+def fib(n):
+    a,b=0,1
+    if n==0:
+        print("0")
+    elif n==1:
+        print("1")
+    else:
+        c=a+b
+        while c<n:
+            a=b
+            b=c
+            c=a+b
+            #print(a,b,c)
+        if abs(c-n)==abs((b)-n):
+            print(b,c)
+        elif abs(c-n)<abs((b)-n):
+            print(c)
+        else:
+            print(b)
+            
 n=int(input())
-a,b=0,1
-while(True):
-    c=a+b
-    if(c>n):
-       h1=b
-       h2=c
-       break
-    a=b
-    b=c
-#print(h1,h2)
-x1=abs(h1-n)
-x2=abs(h2-n)
-if(x1==x2):
-   print(h1,h2)
-elif(x1>x2):
-   print(h2)
-else:
-   print(h1)
+fib(n)
+#print(n)
