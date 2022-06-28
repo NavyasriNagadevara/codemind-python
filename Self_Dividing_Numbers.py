@@ -1,15 +1,13 @@
-a = int(input())
-b = int(input())
-while a!=b+1:
-    temp=a
-    c=0
-    f=0
-    while temp%10!=0:
-        d=temp%10
-        temp//=10
-        if a%d==0:
-            c+=1
-        f+=1
-    if c==f and a%10!=0:
-        print(a,end=" ")
-    a+=1
+def sd(n):
+    t=n
+    while n>0:
+        r=n%10
+        if r==0 or t%r!=0:
+            return False
+        n//=10
+    return True
+a=int(input())
+b=int(input())
+for i in range(a,b+1):
+    if sd(i):
+        print(i,end=" ")
