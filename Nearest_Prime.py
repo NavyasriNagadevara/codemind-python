@@ -1,30 +1,39 @@
-def is_prime(j):
-    i=2
-    v=0
-    while i!=j:
-        if j%i==0:
-            v=1
-        i+=1
-    if v==0:
-        return j
-
-
-x = int(input())
-for i in range(x):
-    y = int(input())
-    b=y
-    for j in range(y,2-1,-1):
-        if is_prime(j):
-            n=j
+def prime_left(x):
+    while x:
+        fact=0
+        c=2
+        count=0
+        while c<=x//2:
+            if x%c==0:
+                count+=1
+            c+=1
+        if count==0:
+            return x
             break
-    while b!=0:
-        if is_prime(b):
-            m=b
+        x-=1
+def prime_right(x):
+    while x:
+        fact=0
+        c=2
+        count=0
+        while c<=x//2:
+            if x%c==0:
+                count+=1
+            c+=1
+        if count==0:
+            return x
             break
-        b+=1
-    if (y-n)<(m-y):
-        print(n)
-    elif (y-n)==(m-y):
-        print(n)
+        x+=1
+
+n = int(input())
+while n:
+    num = int(input())
+    left = num
+    right = num
+    l=prime_left(left)
+    r=prime_right(right)
+    if r-num<num-l:
+        print(r)
     else:
-        print(m)
+        print(l)
+    n-=1
