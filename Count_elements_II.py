@@ -1,15 +1,13 @@
-a,b=map(int,input().split())
-x=list(map(int,input().split()))
-y=list(map(int,input().split()))
-c=set(x)
-d=set(y)
-s=0
-k=0
-count=0
-for i in c:
-    if i not in d:
-        s+=1
-for j in d:
-    if j not in c:
-        k+=1
-print(s+k)
+x,y=map(int,input().split())
+l=list(map(int,input().split()))
+m=list(map(int,input().split()))
+l=set(l)
+m=set(m)
+c=0
+for i in m:
+    if i not in l:
+        c+=1
+for i in l:
+    if i not in m:
+        c+=1
+print(c)
