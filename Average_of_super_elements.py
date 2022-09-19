@@ -1,10 +1,16 @@
-n=int(input())
+x=int(input())
 l=list(map(int,input().split()))
-b=[]
+s=[]
+k=0
 for i in l:
-    if i not in b and l.count(i)==i:
-        b.append(i)
-if len(b)==0:
-    print(-1)
+    if l.count(i)==i:
+        if i not in s:
+            s.append(i)
+for i in s:
+    k=k+i
+h=len(s)
+if(h==0):
+    print("-1")
 else:
-    print("{:.2f}".format(sum(b)/len(b)))
+    print("{:.2f}".format(k/h))
+    
