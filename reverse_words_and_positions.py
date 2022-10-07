@@ -1,4 +1,8 @@
-s=input()
-l=s.split(" ")
-for i in l[::-1]:
-    print(i[::-1],end=" ")
+n=input()
+n=n.split()
+b=[]
+for i in n:
+    i=i[::-1]
+    b.append(i)
+for i in range(len(b)-1,-1,-1):
+    print(b[i],end=" ")
