@@ -1,10 +1,12 @@
 n=int(input())
-l=list(map(int,input().split()))
-s=0
-j=0
-for i in range(n-1,-1,-1):
-    if l[i]==1:
-        #print(l[i])
-        s+=2**j
-    j+=1
-print(s)
+l=list(map(str,input().split()))
+l="".join(l)
+dec=0
+i=0
+l=int(l)
+while l!=0:
+    d=l%10
+    dec=dec+d*pow(2,i)
+    i=i+1
+    l=l//10
+print(dec)
