@@ -1,3 +1,6 @@
-s=input()
-l=s.split(" ")
-print(len(l)-1)
+a=input()
+c=0
+for i in a:
+    if i==" ":
+        c=c+1
+print(c)
