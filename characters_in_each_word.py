@@ -1,4 +1,4 @@
-s=input()
-l=s.split(" ")
-for i in l:
+n=input()
+n=n.split()
+for i in n:
     print(len(i),end=" ")
