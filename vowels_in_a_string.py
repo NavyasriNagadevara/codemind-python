@@ -1,7 +1,7 @@
-N = input()
-c = input()
-if c in N:
+n=input()
+k=input()
+if k in n:
     print(True)
-    print(N.index(c))
-else:
+    print(n.index(k))
+if k not in n:
     print(False)
