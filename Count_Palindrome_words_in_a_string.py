@@ -1,13 +1,11 @@
-def pal(s):
-    ss=s[::-1]
-    if s.lower()==ss.lower():
-        return True
-    else:
-        return False
-s=input()
-l=s.split(" ")
+a=input()
+a=a.lower()
+a=a.split()
 c=0
-for i in l:
-    if pal(i):
-        c+=1
+for i in a:
+    temp=i
+    k=i[::-1]
+    l="".join(k)
+    if temp==l:
+        c=c+1
 print(c)
