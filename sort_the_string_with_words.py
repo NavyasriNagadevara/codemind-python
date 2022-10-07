@@ -1,8 +1,9 @@
-n = list(map(str,input().split()))
-for i in range(0,len(n)):
-    for j in range(0,len(n)):
-        if i!=j and n[i]<n[j]:
-            temp=n[i]
-            n[i]=n[j]
-            n[j]=temp
-print(*n)
+n=input()
+n=n.lower()
+n=n.split()
+c=[]
+for i in n:
+    if i!=' ' and i not in c:
+        c.append(i)
+c=sorted(c)
+print(*c)
