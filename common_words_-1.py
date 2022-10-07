@@ -1,9 +1,15 @@
-a = input()
-b = input()
-a , b = a.lower() , b.lower()
-a , b = a.split(" ") , b.split(" ")
-c = 0
-for i in range(0,len(a)):
-    if a[i] in b:
-        c += 1
+a=input()
+a=a.lower()
+b=input()
+b=b.lower()
+g=[]
+c=0
+a=a.split()
+b=b.split()
+for i in a:
+    for j in b:
+        if i==j:
+            g.append(i)
+for i in g:
+    c=c+1
 print(c)
