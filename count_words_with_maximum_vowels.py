@@ -1,19 +1,15 @@
-s = input().lower()
-s = s.split(' ')
-m = 0
-c = 0
-for i in range(len(s)):
-    d = 0
-    for j in s[i]:
-        if j in 'aeiou':
-            d+=1
-    if d>m:
-        m=d
-for i in range(len(s)):
-    d = 0
-    for j in s[i]:
-        if j in 'aeiou':
-            d+=1
-    if d==m:
-        c+=1
-print(c)
+a=input()
+b=[]
+a=a.split()
+for i in a:
+    c=0
+    for j in i:
+        if j in "aeiou":
+            c=c+1
+    b.append(c)
+t=max(b)
+k=0
+for i in b:
+    if t==i:
+        k=k+1
+print(k)
