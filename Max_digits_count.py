@@ -1,14 +1,19 @@
-def digit(n):
-    c=0
-    while n>0:
-        c+=1
-        n//=10
-    return c
 n=int(input())
-m=list(map(int,input().split()))
-f=digit(max(m))
+l=list(map(int,input().split()))
+k=max(l)
 c=0
-for i in m:
-    if digit(i)==f:
-        c+=1
-print(c)
+s=0
+m=0
+while k:
+    d=k%10
+    k=k//10
+    c+=1
+for i in l:
+    s=0
+    while i:
+        d=i%10
+        i=i//10
+        s+=1
+    if c==s:
+        m=m+1
+print(m)
