@@ -1,8 +1,9 @@
-s = input().lower()
-s = s.split(' ')
-for i in range(len(s)):
-    d = 0
-    for j in s[i]:
-        if j in 'aeiou':
-            d+=1
-    print(d,end=" ")
+a=input()
+c=0
+a=a.split()
+for i in a:
+    c=0
+    for j in i:
+        if j in "aeiou":
+            c=c+1
+    print(c,end=" ")
