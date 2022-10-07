@@ -1,7 +1,9 @@
-s = input().lower()
-s = s.replace(" ","")
-c = 0
-for i in s:
-    if s.count(i)==1:
-        c+=1
-print(c)
+n=input()
+n=n.lower()
+b=[]
+for i in n:
+    if i!=" " and n.count(i)==1:
+        b.append(i)
+b=sorted(b)
+k="".join(b)
+print(len(k))
