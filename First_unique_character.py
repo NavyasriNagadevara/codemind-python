@@ -1,9 +1,10 @@
-s = input().lower()
-x = 0
-for i in s:
-    if s.count(i)==1:
-        print(i)
-        x = 1
-        break
-if x==0:
-    print("-1")
+n=input()
+n=n.lower()
+b=[]
+for i in n:
+    if i not in b and n.count(i)==1:
+        b.append(i)
+if b==[]:
+    print(-1)
+else:
+    print(b[0])
