@@ -1,11 +1,16 @@
-s1=input()
-s2=input()
-s1=s1.lower()
-s2=s2.lower()
+n=input()
+n=n.lower()
+n=set(n)
+m=input()
+m=m.lower()
+m=set(m)
+b=[]
+for i in n:
+    for j in m:
+        if i==j:
+            b.append(i)
 c=0
-s=""
-for i in s1:
-    if i in s2 and i not in s and i!=" ":
-        s+=i
-        c+=1
+for i in b:
+    if i!=" ":
+        c=c+1
 print(c)
