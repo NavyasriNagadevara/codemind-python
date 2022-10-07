@@ -1,20 +1,38 @@
-n = int(input())
-arr = list(map(int,input().split()))
-e = []
-o = []
-for i in range(0,n):
-    if arr[i]%2==0:
-        e.append(arr[i])
+n=int(input())
+l=list(map(int,input().split()))
+a=[]
+b=[]
+e=[]
+for i in l:
+    if i%2==0:
+        a.append(i)
     else:
-        o.append(arr[i])
-i = 0
-j = 0
-while i<len(e) or j<len(o):
-    if i<len(e):
-        print(e[i],end=" ")
-        i+=1
-    if j<len(o):
-        print(o[j],end=" ")
-        j+=1
-if n%2!=0:
-    print("0")
+        b.append(i)
+if len(a)<len(b):
+    for i in range(len(a)):
+        e.append(a[i])
+        e.append(b[i])
+    for i in range(len(a),len(b)):
+        e.append(b[i])
+    if n%2==0:
+        print(*e)
+    else:
+       e.append(0)
+       print(*e)
+if len(b)<len(a):
+    for i in range(len(b)):
+        e.append(a[i])
+        e.append(b[i])
+    for i in range(len(b),len(a)):
+        e.append(a[i])
+    if n%2==0:
+        print(*e)
+    else:
+        e.append(0)
+        print(*e)
+else:
+    for i in range(len(b)):
+        e.append(a[i])
+        e.append(b[i])
+    print(*e)
+        
