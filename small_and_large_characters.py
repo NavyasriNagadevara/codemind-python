@@ -1,4 +1,9 @@
-n = input()
-m = n.split(" ")
-for i in range(0,len(m)):
-    print(min(m[i]),max(m[i]),end=" ")
+a=input()
+a=a.split()
+b=[]
+for i in a:
+    k=min(i)
+    h=max(i)
+    b.append(k)
+    b.append(h)
+print(*b)
